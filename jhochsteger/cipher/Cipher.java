@@ -1,4 +1,4 @@
-package jhochsteger;
+package jhochsteger.cipher;
 
 /**
  * An Interface, that has an encryption and decryption Method

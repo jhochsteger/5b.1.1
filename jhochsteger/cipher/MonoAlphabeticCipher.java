@@ -1,4 +1,4 @@
-package jhochsteger;
+package jhochsteger.cipher;
 
 /**
  * A Class that implements two methods from the Interface Cipher.
