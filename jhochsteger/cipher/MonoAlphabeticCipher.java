@@ -8,6 +8,9 @@ package jhochsteger.cipher;
 public class MonoAlphabeticCipher implements Cipher{
     private String secretAlphabet, standardsecretAlphabet;
 
+    /**
+     * A Constructor for the Class MonoAlphabeticCipher
+     */
     public MonoAlphabeticCipher(){
         secretAlphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
         standardsecretAlphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
@@ -23,18 +26,28 @@ public class MonoAlphabeticCipher implements Cipher{
 
     @Override
     public String encrypt(String text) {
+        text = text.toLowerCase();
         String encrypted = "";
         for (int i = 0; i < text.length(); i++) {
-            encrypted += secretAlphabet.charAt(standardsecretAlphabet.indexOf(text.charAt(i)));
+            if (standardsecretAlphabet.indexOf(text.charAt(i)) != -1) {
+                encrypted += secretAlphabet.charAt(standardsecretAlphabet.indexOf(text.charAt(i)));
+            } else {
+                encrypted += text.charAt(i);
+            }
         }
         return encrypted;
     }
 
     @Override
     public String decrypt(String text) {
+        text = text.toLowerCase();
         String decrypted = "";
         for (int i = 0; i < text.length(); i++) {
-            decrypted += standardsecretAlphabet.charAt(secretAlphabet.indexOf(text.charAt(i)));
+            if (secretAlphabet.indexOf(text.charAt(i)) != -1) {
+                decrypted += standardsecretAlphabet.charAt(secretAlphabet.indexOf(text.charAt(i)));
+            } else {
+                decrypted += text.charAt(i);
+            }
         }
         return decrypted;
     }

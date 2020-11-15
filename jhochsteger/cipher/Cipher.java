@@ -8,15 +8,15 @@ package jhochsteger.cipher;
 public interface Cipher {
     /**
      * A Method to encrypt a given String
-     * @param text
-     * @return
+     * @param text The text that needs to be encrypted
+     * @return the encrypted text
      */
     public String encrypt(String text);
 
     /**
      * A Method to decrypt a given String
-     * @param text
-     * @return
+     * @param text The text that needs to be decrypted
+     * @return the decrypted text
      */
     public String decrypt(String text);
 }
