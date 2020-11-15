@@ -16,14 +16,27 @@ public class MonoAlphabeticCipher implements Cipher{
         standardsecretAlphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
     }
 
+    /**
+     * A Getter-Method for the secret Alphabet
+     * @return the secret Alphabet
+     */
     public String getSecretAlphabet() {
         return secretAlphabet;
     }
 
+    /**
+     * A Setter-Method for the secret Alphabet
+     * @param secretAlphabet the new secret Alphabet
+     */
     protected void setSecretAlphabet(String secretAlphabet) {
         this.secretAlphabet = secretAlphabet;
     }
 
+    /**
+     * A Method that encrypts a given String
+     * @param text The text that needs to be encrypted
+     * @return The encrypted String
+     */
     @Override
     public String encrypt(String text) {
         text = text.toLowerCase();
@@ -38,6 +51,11 @@ public class MonoAlphabeticCipher implements Cipher{
         return encrypted;
     }
 
+    /**
+     * A Method that decrypts a given String
+     * @param text The text that needs to be decrypted
+     * @return The decrypted String
+     */
     @Override
     public String decrypt(String text) {
         text = text.toLowerCase();

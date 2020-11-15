@@ -7,10 +7,18 @@ package jhochsteger.cipher;
  * @version 14-11-2020
  */
 public class SubstitutionCipher extends MonoAlphabeticCipher {
+    /**
+     * A Constructor for the Class SubsstitutionCipher
+     * @param secretAlphabet
+     */
     public SubstitutionCipher(String secretAlphabet) {
         setSecretAlphabet(secretAlphabet);
     }
 
+    /**
+     * A Setter-Method for the secret Alphabet
+     * @param secretAlphabet the new secret Alphabet
+     */
     public void setSecretAlphabet(String secretAlphabet) {
         String occurredChars = "";
         String standardsecretAlphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
