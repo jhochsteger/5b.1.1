@@ -9,6 +9,7 @@ package jhochsteger.cipher;
 public class SubstitutionCipher extends MonoAlphabeticCipher {
     /**
      * A Constructor for the Class SubsstitutionCipher
+     *
      * @param secretAlphabet
      */
     public SubstitutionCipher(String secretAlphabet) {
@@ -17,6 +18,7 @@ public class SubstitutionCipher extends MonoAlphabeticCipher {
 
     /**
      * A Setter-Method for the secret Alphabet
+     *
      * @param secretAlphabet the new secret Alphabet
      */
     public void setSecretAlphabet(String secretAlphabet) {

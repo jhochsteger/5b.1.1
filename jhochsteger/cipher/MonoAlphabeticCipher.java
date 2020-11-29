@@ -2,22 +2,24 @@ package jhochsteger.cipher;
 
 /**
  * A Class that implements two methods from the Interface Cipher.
+ *
  * @author Jonas Hochsteger
  * @version 14-11-2020
  */
-public class MonoAlphabeticCipher implements Cipher{
+public class MonoAlphabeticCipher implements Cipher {
     private String secretAlphabet, standardsecretAlphabet;
 
     /**
      * A Constructor for the Class MonoAlphabeticCipher
      */
-    public MonoAlphabeticCipher(){
+    public MonoAlphabeticCipher() {
         secretAlphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
         standardsecretAlphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
     }
 
     /**
      * A Getter-Method for the secret Alphabet
+     *
      * @return the secret Alphabet
      */
     public String getSecretAlphabet() {
@@ -26,6 +28,7 @@ public class MonoAlphabeticCipher implements Cipher{
 
     /**
      * A Setter-Method for the secret Alphabet
+     *
      * @param secretAlphabet the new secret Alphabet
      */
     protected void setSecretAlphabet(String secretAlphabet) {
@@ -34,6 +37,7 @@ public class MonoAlphabeticCipher implements Cipher{
 
     /**
      * A Method that encrypts a given String
+     *
      * @param text The text that needs to be encrypted
      * @return The encrypted String
      */
@@ -53,6 +57,7 @@ public class MonoAlphabeticCipher implements Cipher{
 
     /**
      * A Method that decrypts a given String
+     *
      * @param text The text that needs to be decrypted
      * @return The decrypted String
      */
